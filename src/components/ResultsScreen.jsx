@@ -247,6 +247,15 @@ export default function ResultsScreen({ adilAnswers, dianaAnswers, onRestart }) 
         <button className="btn btn-primary" onClick={handleCopyResultsLink}>
           Скопировать ссылку с результатами
         </button>
+        {onRestart && (
+          <button
+            className="btn btn-secondary"
+            onClick={onRestart}
+            style={{ marginTop: 10 }}
+          >
+            Начать заново
+          </button>
+        )}
         {copied && (
           <p style={{ fontSize: 13, color: "var(--success)", textAlign: "center", marginTop: 8 }}>
             ✓ Ссылка скопирована
